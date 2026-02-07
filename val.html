@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="val.css">
+        <title>
+            The Big Question
+        </title>
+    </head>
+    <body>
+        <audio id="nope" src="attachments/NOPE.mp3" preload="auto"></audio>
+        <div class="subsection">
+            <h1 style="font-family: Brush Script MT;font-size: 300%;">
+                You're still the one ❤️
+            </h1>
+            <p class="para">
+                Darling, what we are on together,<br>
+                Is a journey;<br>
+                A journey I’d choose to take a thousand times.<br>
+                After knowing you and being with you for 3 years <br>
+                there’s nothing more that I want than to love you forever.<br>
+                You know how every piece of a picture puzzle is unique?<br>
+                You are my missing puzzle piece,<br>
+                So unique in every way. <br>
+                You’re still the one and you’ll always be,<br>
+            </p>
+            <details>
+                <summary>Click here</summary>
+                <ul id="list">
+                    <li>The one who keeps me happy,</li>
+                    <li>The one who motivates me,</li>
+                    <li>The one who makes sure I’m safe,</li>
+                    <li>The one who makes fun of me,</li>
+                    <li>The one who is willing to spend all their time with me.</li>
+                </ul>
+            </details>
+            <p class="para">
+                Before I get to the big question I just wanna thank you,<br>
+                For all the memories we have made together<br>
+                And the ones that aren’t made yet,<br>
+                And for choosing to be with me and love me no matter how messed up I am.<br><br>
+                Now as we come closer to an important day, <br>
+                it begs an answer to an important question…<br>
+            </p>
+        </div>
+        <main>
+            <h1 id="question">Will you be my Valentine?</h1>
+            <div class="button-container">
+                <button id="yesBtn" onclick="location.href='val1.html'">Yes</button>
+                <button id="noBtn" style="position: absolute;">No</button>
+            </div>
+        </main>
+        <script>
+            const noBtn = document.getElementById('noBtn');
+            const moveSound = document.getElementById('nope');
+            const movementRadius = 150;
+
+            noBtn.addEventListener('mouseover', () => {
+
+                moveSound.currentTime = 0;
+                moveSound.play();
+
+                if (!noBtn.style.top) {
+                    noBtn.style.top = `${noBtn.getBoundingClientRect().top}px`;
+                    noBtn.style.left = `${noBtn.getBoundingClientRect().left}px`;
+                }
+
+                const currentTop = parseFloat(noBtn.style.top);
+                const currentLeft = parseFloat(noBtn.style.left);
+
+                const randomX = (Math.random() * 2 - 1) * movementRadius;
+                const randomY = (Math.random() * 2 - 1) * movementRadius;
+
+                let newTop = currentTop + randomY;
+                let newLeft = currentLeft + randomX;
+
+                newTop = Math.max(50, Math.min(newTop, window.innerHeight - 50));
+                newLeft = Math.max(50, Math.min(newLeft, window.innerWidth - 150));
+
+                noBtn.style.position = 'fixed';
+                noBtn.style.top = `${newTop}px`;
+                noBtn.style.left = `${newLeft}px`;
+            });
+        </script>
+    </body>
+</html>

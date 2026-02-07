@@ -1,0 +1,97 @@
+body{
+    background-color: pink;
+    background-image: url('attachments/background.avif');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+div.subsection{
+    background-color: rgba(255, 255, 255, 0.579);
+    width: 80%;
+    display: grid;
+    justify-items: center;
+    margin-left: 10%;
+    margin-top: 5%;
+    border-radius: 25px;
+}
+p.para{
+    font-size: x-large;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+}
+details summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+details summary:hover {
+    background-color: #ff4d6d;
+    color: white;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #ddd;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#list{
+    font-size:x-large;
+}
+main{
+    background-color: white;
+    background-image: url('attachments/valBack.jpg');
+    background-attachment: fixed;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 70%;
+    height: 400px;
+    display: grid;
+    justify-items: center;
+    margin-bottom: 5%;
+    margin-left: 15%;
+    margin-top: 5%;
+    border-radius: 25px;
+    padding-bottom: 3%;
+    padding-top: 2%;
+}
+.button-container {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 50px;
+    width: 100%;
+    margin-top: -30%;
+    margin-right: 15%;
+}
+#noBtn {
+    position: absolute;
+    left: calc(50% + 80px);
+    transition: top 0.2s ease-out, left 0.2s ease-out;
+    cursor: pointer;
+}
+#yesBtn:hover {
+    transform: scale(1.2);
+    background-color: #ff4d6d;
+    color: white;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+button {
+    padding: 8px 20px;
+    border-radius: 25px;
+    border-color: white;
+    min-width: 100px;
+    min-height: 40px;
+    font-size: 0.95rem;
+    transition: transform 0.2s ease;
+}
+#question {
+    font-size:300%;
+}
